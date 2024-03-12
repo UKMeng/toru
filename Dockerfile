@@ -41,7 +41,7 @@ RUN pip install --no-cache-dir gunicorn uvicorn[standard] nonebot2 \
 
 RUN playwright install-deps
 RUN playwright install chromium
-RUN apt install fonts-noto-cjk fonts-noto-color-emoji
+RUN apt install -y fonts-noto-cjk fonts-noto-color-emoji
 
 COPY . /app/
 
