@@ -4,6 +4,8 @@ WORKDIR /wheel
 
 RUN python -m pip install --user pipx
 
+RUN apt-get update && apt-get install -y build-essential unzip wget git
+
 COPY ./pyproject.toml \
   ./poetry.lock \
   /wheel/
@@ -27,7 +29,7 @@ RUN --mount=type=cache,target=/var/cache/apt \
     fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 \
     libcairo2 libcups2 libdbus-1-3 libdrm2 libegl1 libgbm1 libglib2.0-0 libgtk-3-0 \
     libnspr4 libnss3 libpango-1.0-0 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 \
-    libxdamage1 libxext6 libxfixes3 libxrandr2 libxshmfence1 nano fonts-noto-cjk fonts-noto-color-emoji
+    libxdamage1 libxext6 libxfixes3 libxrandr2 libxshmfence1 nano fonts-noto-cjk
 
 ENV TZ Asia/Shanghai
 ENV PYTHONPATH=/app
