@@ -41,7 +41,13 @@ RUN pip install --no-cache-dir gunicorn uvicorn[standard] nonebot2 \
 
 RUN playwright install-deps
 RUN playwright install chromium
-RUN apt install -y fonts-noto-cjk fonts-noto-color-emoji
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends locales fontconfig fonts-noto-color-emoji gettext \
+  && localedef -i zh_CN -c -f UTF-8 -A /usr/share/locale/locale.alias zh_CN.UTF-8 \
+  && fc-cache -fv \
+  && apt-get purge -y --auto-remove \
+  && rm -rf /var/lib/apt/lists/*
+
 
 COPY . /app/
 
