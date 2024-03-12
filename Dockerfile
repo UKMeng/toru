@@ -23,8 +23,8 @@ WORKDIR /app
 
 RUN --mount=type=cache,target=/var/cache/apt \
   --mount=type=cache,target=/var/lib/apt \
-    apt-get update && apt-get install -y xvfb fonts-noto-color-emoji ttf-unifont \
-    libfontconfig1 libfreetype6 xfonts-cyrillic xfonts-scalable fonts-liberation \
+    apt-get update && apt-get install -y xvfb fonts-noto-color-emoji \
+    libfontconfig1 libfreetype6 xfonts-scalable fonts-liberation \
     fonts-ipafont-gothic fonts-wqy-zenhei fonts-tlwg-loma-otf  \
     fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 \
     libcairo2 libcups2 libdbus-1-3 libdrm2 libegl1 libgbm1 libglib2.0-0 libgtk-3-0 \
