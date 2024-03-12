@@ -28,6 +28,7 @@ nonebot2 = {extras = ["fastapi"], version = "^2.2.1"}
 nonebot-plugin-jrrp2 = "^1.6"
 nonebot-bison = "^0.9.1"
 nonebot-plugin-memes = "^0.6.1"
+nonebot-plugin-alconna = "0.38.2"
 
 
 [build-system]
