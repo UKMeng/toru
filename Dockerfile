@@ -4,7 +4,7 @@ WORKDIR /wheel
 
 RUN python -m pip install --user pipx
 
-RUN apt-get update && apt-get install -y build-essential unzip wget git
+RUN apt-get update && apt-get install -y build-essential unzip wget git nano
 
 COPY ./pyproject.toml \
   ./poetry.lock \

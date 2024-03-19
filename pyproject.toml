@@ -9,7 +9,11 @@ requires-python = ">=3.8, <4.0"
 adapters = [
     { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
 ]
-plugins = ["nonebot_plugin_jrrp2","nonebot_bison","nonebot_plugin_memes_api"]
+plugins = [ "nonebot_plugin_jrrp2",
+            "nonebot_plugin_memes_api",
+            "nonebot-plugin-skland-arksign",
+            #"nonebot_bison"
+            ]
 plugin_dirs = []
 builtin_plugins = ["echo"]
 
@@ -28,6 +32,7 @@ nonebot2 = {extras = ["fastapi", "httpx", "websockets"], version = "^2.2.1"}
 nonebot-plugin-jrrp2 = "^1.6"
 nonebot-bison = "^0.9.1"
 nonebot-plugin-memes-api = "^0.3.2"
+nonebot-plugin-skland-arksign = "^0.7.0"
 
 
 [build-system]
