@@ -30,5 +30,9 @@ else
   echo "There is no script $PRE_START_PATH"
 fi
 
+# Run nb orm upgrade
+echo "Running nb orm upgrade"
+nb orm upgrade
+
 # Start Gunicorn
 exec gunicorn -k "$WORKER_CLASS" -c "$GUNICORN_CONF" "$APP_MODULE"

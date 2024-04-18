@@ -50,6 +50,4 @@ RUN apt-get update \
 
 COPY . /app/
 
-RUN nb orm upgrade
-
 CMD ["/start.sh"]
