@@ -11,7 +11,7 @@ adapters = [
 ]
 plugins = [ "nonebot_plugin_jrrp2",
             "nonebot_plugin_memes_api",
-            "nonebot_plugin_skland_arksign",
+            #"nonebot_plugin_skland_arksign",
             #"nonebot_bison"
             ]
 plugin_dirs = []
