@@ -48,7 +48,8 @@ RUN apt-get update \
   && apt-get purge -y --auto-remove \
   && rm -rf /var/lib/apt/lists/*
 
-
 COPY . /app/
+
+RUN nb orm upgrade
 
 CMD ["/start.sh"]
