@@ -35,8 +35,7 @@ COPY ./docker/_main.py /app
 COPY --from=requirements_stage /wheel /wheel
 
 RUN python -m pip install --user pipx
-RUN python -m pipx ensurepath
-RUN pipx install nb-cli
+RUN python -m pipx install nb-cli
 
 RUN pip install --no-cache-dir gunicorn uvicorn[standard] nonebot2 \
   && pip install --no-cache-dir --no-index --force-reinstall --find-links=/wheel -r /wheel/requirements.txt && rm -rf /wheel
