@@ -34,6 +34,8 @@ COPY --from=requirements_stage /tmp/bot.py /app
 COPY ./docker/_main.py /app
 COPY --from=requirements_stage /wheel /wheel
 
+RUN python -m pip install --user pipx
+RUN python -m pipv ensurepath
 RUN pipx install nb-cli
 
 RUN pip install --no-cache-dir gunicorn uvicorn[standard] nonebot2 \
