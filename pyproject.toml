@@ -33,6 +33,7 @@ nonebot-plugin-jrrp2 = "^1.6"
 nonebot-plugin-memes-api = "^0.4.9"
 nonebot-plugin-orm = {extras = ["default"], version = "^0.7.6"}
 nonebot-bison = "^0.9.3"
+nb-cli = "^1.4.1"
 
 
 [build-system]
